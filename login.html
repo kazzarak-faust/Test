@@ -8,7 +8,7 @@
     <body>
         <div class="container">
             <div class="image-section">
-                <img alt="Stranger Things poster with various characters and scenes from the show" height="700" src="asset/bg 1.jpg " width="500"/>
+                <img alt="Stranger Things poster with various characters and scenes from the show" height="700" src="asset/bg/bglogin.png " width="500"/>
             </div>
             <div class="form-section">
                 <h2>LOGIN</h2>
@@ -27,7 +27,7 @@
                         <img alt="Toggle password visibility" class="password-toggle" height="20" src="asset/icon/eye.png" width="20"/>
                     </div>
                 </div>
-                <button class="btn-login">Login</button>
+                <button class="btn-login" onclick="redirectToindex()">Login</button>
                 <button class="btn-google">
                     <img alt="Google logo" height="20" src="asset/icon/google.png" width="20"/>
                     Masuk Dengan Akun Google
@@ -38,6 +38,11 @@
                 </p>
             </div>
         </div>
+        <script>
+            function redirectToindex() {
+                window.location.href = "index.html";
+            }
+        </script>
         <script>
             document.querySelector('.password-toggle').addEventListener('click', function() {
                 const passwordInput = document.getElementById('password');

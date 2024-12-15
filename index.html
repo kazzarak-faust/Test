@@ -4,29 +4,66 @@
    Stranger Things
   </title>
   <link rel="stylesheet" href="asset/css/main.css" />
+  <script>
+    function togglePopupnav() {
+        const popup = document.getElementById("profile-popup");
+        popup.style.display = popup.style.display === "block" ? "none" : "block";
+    }
+
+    function closePopupnav() {
+        document.getElementById("profile-popup").style.display = "none";
+    }
+</script>
+<script>
+    function redirectTologin() {
+        window.location.href = "login.html";
+    }
+    function redirectToregis() {
+        window.location.href = "register.html";
+    }
+</script>
  </head>
- <body style="background-image: url(asset/bg/Background.png);">
-    <div class="header">
-        <div class="navbar">
-            <img class="menu-icon" src="asset/icon/menu.png" onclick="toggleSidebar()">
-            <div class="sidebar hidden">
+ <body style="background-image: url('asset/bg/Background.png');">
+    <div class="header-main">
+        <div class="header-main">
+            <div class="navbar-main">
                 <img class="menu-icon" src="asset/icon/menu.png" onclick="toggleSidebar()">
-                <a href="akun.html"><div class="menu-item">
-                    <img class="menu-icon default-icon" src="asset/icon/mdi_account-circle-outline.png">
-                    Akun
-                </div></a>
-                <a href="about.html"><div class="menu-item">
-                    <img class="menu-icon default-icon" src="asset/icon/ix_about.png">
-                    Tentang Kami
-                </div></a>
-                <a href="konspirasi/add.html"><div class="menu-item">
-                    <img class="menu-icon default-icon" src="asset/icon/icons8_plus.png">
-                    Komunitas
-                </div></a>
-            </div>
-            <div>
-                <a href="konspirasi/konspirasi.html">Konspirasi</a>
-                <a href="#">Games</a>
+                <div class="sidebar hidden">
+                    <img class="menu-icon" src="asset/icon/menu.png" onclick="toggleSidebar()">
+                    <a href="akun.html">
+                        <div class="menu-item">
+                            <img class="menu-icon default-icon" src="asset/icon/mdi_account-circle-outline.png">
+                            Akun
+                        </div>
+                    </a>
+                    <a href="about.html">
+                        <div class="menu-item">
+                            <img class="menu-icon default-icon" src="asset/icon/ix_about.png">
+                            Tentang Kami
+                        </div>
+                    </a>
+                    <a href="konspirasi/add.html">
+                        <div class="menu-item">
+                            <img class="menu-icon default-icon" src="asset/icon/icons8_plus.png">
+                            Komunitas
+                        </div>
+                    </a>
+                </div>
+                <div class="jadi-satu">
+                    <a href="konspirasi/konspirasi.html">Konspirasi</a>
+                    <a href="#">Games</a>
+                </div>
+                <div>
+                        <img class="menu-icon" src="asset/icon/user.png" alt="User icon for login or register" onclick="togglePopupnav()">
+                        <div id="profile-popup" class="popup-overlay">
+                            <div class="popup-content">
+                                <button onclick="redirectTologin()">Login</button>
+                                <button onclick="redirectToregis()">Register</button>
+                                <button onclick="closePopupnav()">Tutup</button>
+                            </div>
+                        </div>
+                </div>
+                
             </div>
         </div>
     </div>
