@@ -448,7 +448,7 @@ body {
     text-align: center;
 }
 
-.popup-overlay {
+.news-popup-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -459,7 +459,7 @@ body {
     z-index: 1000;
 }
 
-.popup-content {
+.news-popup-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -474,13 +474,13 @@ body {
     overflow-y: auto;
 }
 
-.popup-content img {
+.news-popup-content img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.popup-close {
+.news-popup-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -491,20 +491,23 @@ body {
     cursor: pointer;
 }
 
-.popup-content .title {
+.news-popup-content .title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #f5f5f5;
 }
 
-.popup-content .content {
+.news-popup-content .content {
     text-align: left;
     margin-top: 20px;
     font-size: 16px;
     line-height: 1.6;
     color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .header {
     font-size: 2em;
